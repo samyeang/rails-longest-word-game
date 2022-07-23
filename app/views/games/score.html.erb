@@ -1,0 +1,12 @@
+<h1>Result</h1>
+
+<% if (@check_exist.include?(false)) %>
+  <p>Sorry but <b><%= @word %></b> can't be built out of <%= @letters %></p>
+<% else %>
+  <% if (@check["found"] == true) %>
+    <p><b>Congratulations!</b> <%= @word %> is a valid english word</p>
+  <% else %>
+    <p>Sorry but <b><%= @word %></b> does not seem to be a valid english word..."</p>
+  <% end %>
+<% end %>
+<p><%= link_to "Play Again", "/new" %></p>
